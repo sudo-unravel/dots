@@ -1,0 +1,44 @@
+{
+	"workbench.iconTheme": "material-icon-theme",
+	"prettier.tabWidth": 4,
+	"editor.minimap.enabled": false,
+	"prettier.quoteProps": "consistent",
+	"prettier.useTabs": true,
+	"editor.fontFamily": "'FiraMono Nerd Font','Roboto Mono', monospace",
+	"editor.smoothScrolling": true,
+	"editor.linkedEditing": true,
+	"editor.guides.bracketPairs": true,
+	"files.associations": {
+		"*.xml": "html",
+		"*.svg": "html"
+	},
+	"prettier.printWidth": 180,
+	"oneDarkPro.bold": true,
+	"workbench.editorAssociations": {
+		"*.db": "sqlite-viewer.option"
+	},
+	"workbench.editor.alwaysShowEditorActions": true,
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.renderWhitespace": "all",
+	"[python]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.tabCompletion": "on",
+	"editor.acceptSuggestionOnEnter": "off",
+	"python.analysis.autoImportCompletions": true,
+	"python.analysis.diagnosticMode": "workspace",
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"workbench.colorTheme": "Catppuccin Macchiato",
+	"catppuccin.accentColor": "peach",
+	"window.customTitleBarVisibility": "windowed",
+	"oneDarkPro.vivid": true,
+	"catppuccin.workbenchMode": "flat"
+}
