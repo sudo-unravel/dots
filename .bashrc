@@ -24,14 +24,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias bashrc-source="source ~/.bashrc"
-alias bashrc-edit="nano ~/.bashrc"
-
-#Homebrew
+# ---- Homebrew ----
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ---- fzf ----
@@ -82,35 +75,19 @@ _fzf_comprun() {
 
 # catppuccin colors
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
---color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
---color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
+--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
+--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
+--color=marker:#b7bdf8,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
+--color=selected-bg:#494d64 \
+--multi"
 
 # ---- eza ----
 alias ls="eza --color=always --icons=always"
-alias lst="eza --color=always --icons=always --tree --level=2"
+alias lst="eza --color=always --icons=always --tree --level=3"
 
-# ---- spicetify ----
-export PATH=$PATH:/home/whisprs/.spicetify
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# ---- bash prompt ----
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-set_ps1() {
-  # https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797#256-colors
-  # ^ Use the 256-colors IDs
-  local accent_color_1='215'
-  local accent_color_2='111'
-  local text_color_1='232'
-  local text_color_2='232'
-  local dirchar_color='208'
-  local end_prompt_color='5'
-
-  local pwd2=$(echo "$PWD" | sed -e "s:$HOME:~:" -e "s:\([^/]\)/:\1$(printf ' \356\202\261 '):g")
-  PS1="\n\342\224\214\342\224\200 \[\e[38;5;$(echo $accent_color_1)m\]\356\202\262\[\e[0m\e[48;5;$(echo $accent_color_1)m\e[38;5;$(echo $text_color_1)m\] \u@\h \[\e[0m\e[48;5;$(echo $accent_color_2)m\e[38;5;$(echo $accent_color_1)m\]\356\202\260\[\e[38;5;$(echo $text_color_2)m\] $pwd2 \[\e[0m\e[38;5;$(echo $accent_color_2)m\]\356\202\260\n\[\e[38;5;$(echo $end_prompt_color)m\]$\[\e[0m\] "
-}
-
-PROMPT_COMMAND="set_ps1"
-
-clear
+# ---- staship ----
+eval "$(starship init bash)"
