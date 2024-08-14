@@ -7,7 +7,7 @@ format = "[$user]($style)"
 
 [os]
 disabled = false
-format = '[$symbol ]($style)'
+format = '[$symbol ](blue)'
 
 [character]
 success_symbol = "[>](green)"
