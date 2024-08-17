@@ -8,9 +8,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# ---- Homebrew ----
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # ---- fzf ----
 eval "$(fzf --bash)"
 
@@ -31,11 +28,6 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
-
-# Delay fzf-git sourcing because sourcing automatically results in a black screen after login
-if [[ $- == *i* ]]; then
-  source ~/.fzf-git/fzf-git.sh
-fi
 
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
