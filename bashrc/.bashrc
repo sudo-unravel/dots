@@ -61,6 +61,7 @@ export FZF_DEFAULT_OPTS=" \
 alias ls="eza --color=always --icons=always"
 alias lst="eza --color=always --icons=always --tree --level=3"
 
+# ---- nvm ----
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
