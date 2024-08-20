@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
 [Desktop Entry]
-DefaultProfile=Catppuccin Frappe - Custom.profile
+DefaultProfile=Catppuccin.profile
 
 [General]
 ConfigVersion=1
@@ -15,5 +15,3 @@ ToolBarsMovable=Disabled
 
 [Notification Messages]
 CloseAllTabs=true
-
-
