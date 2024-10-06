@@ -9,7 +9,7 @@
 
     //editor
     "editor.minimap.enabled": false,
-    "editor.fontFamily": "'SauceCode Mono','Roboto Mono', monospace",
+    "editor.fontFamily": "'Roboto Mono NF','Roboto Mono', monospace",
     "editor.smoothScrolling": true,
     "editor.linkedEditing": true,
     "editor.guides.bracketPairs": true,
@@ -17,7 +17,6 @@
     "editor.formatOnSave": true,
     "editor.fontSize": 16,
     "editor.lineNumbers": "relative",
-    "editor.renderWhitespace": "all",
     "editor.tabCompletion": "on",
     "editor.acceptSuggestionOnEnter": "off",
 
@@ -58,9 +57,6 @@
     },
 
     //Formatting
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "[python]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 4
@@ -68,5 +64,19 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "go.toolsManagement.autoUpdate": true
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    //go
+    "go.toolsManagement.autoUpdate": true,
+    "go.alternateTools": {
+        "go": "~/.local/share/mise/installs/go/1.23.2/bin/go"
+    }
 }
