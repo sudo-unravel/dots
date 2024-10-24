@@ -1,0 +1,120 @@
+@import "./themes/macchiato.css";
+
+/* General Styles */
+* {
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "NotoSans Nerd Font";
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    min-height: 0;
+    margin: 0;
+}
+
+/* Waybar Styles */
+#waybar {
+    background: transparent;
+    color: @text;
+}
+
+/* Module Backgrounds */
+.modules-left,
+.modules-right,
+tooltip,
+#tray menu,
+#workspaces,
+#custom-power {
+    background-color: @surface0;
+    border-radius: 1rem;
+}
+
+.modules-left,
+.modules-right {
+    padding: 0.2rem;
+    margin: 5px 0;
+}
+
+/* Workspaces */
+#workspaces {
+    background-color: @surface0;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+
+#workspaces button.active {
+    color: @sky;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+}
+
+/* Custom Notifications */
+#custom-notification {
+    color: @teal;
+    padding-right: 0.2rem;
+    font-size: 21px; /* Increased font size for notifications */
+}
+
+/* System Indicators */
+#cpu {
+    color: @yellow;
+}
+
+#memory {
+    color: @green;
+}
+
+#clock {
+    color: @yellow;
+}
+
+/* Tooltip Styles */
+tooltip {
+    border: 1px solid @surface0;
+}
+
+/* Power Button */
+#custom-power {
+    font-size: 1.2rem;
+    color: @red;
+    padding-right: 0.5rem;
+}
+
+/* PulseAudio */
+#pulseaudio {
+    color: @maroon;
+    padding-left: 0.5rem;
+}
+
+/* Tray */
+#tray menu {
+    border: 1px solid @surface0;
+}
+
+#tray menu > *:hover {
+    color: @surface1;
+}
+
+/* Music */
+#custom-music {
+    color: @mauve;
+    border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-notification,
+#custom-power {
+    padding: 0 0.5rem;
+}

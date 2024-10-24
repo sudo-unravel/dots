@@ -1,0 +1,109 @@
+@import "./themes/macchiato.css";
+
+* {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "NotoSans Nerd Font";
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    min-height: 0;
+    margin: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: @text;
+}
+
+#workspaces,
+#tray,
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-spotify,
+#custom-notification,
+#custom-updates,
+#custom-power {
+    background-color: @surface0;
+    padding: 0.25rem 1rem;
+    margin: 5px 0;
+}
+
+#workspaces {
+    border-radius: 1rem;
+    background-color: @surface0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+
+#workspaces button.active {
+    color: @sky;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    background: @surface3;
+    color: @sapphire;
+    border-radius: 1rem;
+}
+
+#clock {
+    color: @mauve;
+}
+
+#pulseaudio {
+    color: @maroon;
+    border-radius: 1rem 0px 0px 1rem;
+}
+
+#cpu {
+    color: @yellow;
+}
+
+#memory {
+    color: @green;
+}
+
+#custom-spotify {
+    color: @green;
+    border-radius: 1rem;
+}
+
+#custom-power {
+    border-radius: 1rem;
+    color: @red;
+    margin-right: 1rem;
+}
+
+#custom-updates {
+    font-size: 1.2rem;
+    color: @teal;
+    padding-right: 0;
+}
+
+#custom-notification {
+    color: @blue;
+    font-size: 1.2rem;
+    border-radius: 0px 1rem 1rem 0px;
+    margin-right: 1rem;
+}
+
+#tray {
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+#tray menu,
+tooltip {
+    background-color: @surface0;
+    color: @text;
+    border-radius: 1rem;
+}
