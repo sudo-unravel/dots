@@ -1,13 +1,13 @@
-format = '$os$username$all'
+format = '$os$all'
 palette = "catppuccin_mocha"
 
 [username]
-show_always = true
+show_always = false
 format = "[$user]($style)"
 
 [os]
 disabled = false
-format = '[$symbol ](blue)'
+format = '[$symbol](blue)'
 
 [character]
 success_symbol = "[>](green)"
@@ -244,7 +244,7 @@ symbol = " "
 [directory]
 truncation_length = 8
 truncation_symbol = '…/'
-format = ' @ [$path ]($style)[$read_only]($read_only_style)'
+format = ' [$path ]($style)[$read_only]($read_only_style)'
 read_only = " 󰌾"
 
 [os.symbols]
