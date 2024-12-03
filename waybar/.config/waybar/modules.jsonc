@@ -22,15 +22,22 @@
         "spacing": 10
     },
     "clock": {
+        "format": "{:%B %d %Y 󰸗 // %R }",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "calendar": {
+            "format": {
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
     },
     "cpu": {
         "format": "{usage}% ",
+        "interval": 5,
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{used}GB ",
+        "interval": 5
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -53,6 +60,14 @@
             "default": ["", "", " "]
         },
         "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": "{icon} {num_connections}",
+        "format-icons": {
+            "enabled": "󰂯",
+            "disabled": "󰂲"
+        },
+        "on-click": "kitty bluetui"
     },
     "custom/power": {
         "format": "⏻",
@@ -112,17 +127,39 @@
         "return-type": "json",
         "format-icons": {
             "has-updates": "󱍷",
-            "updated": "󰂪"
+            "updated": "󰗠"
         },
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates --network-interval-seconds 3600"
     },
-    "custom/spotify": {
+    "custom/spotify-playing-now": {
         "exec": "/usr/bin/python3 /home/whisprs/.config/waybar/scripts/mediaplayer.py --player spotify",
         "format": "{} ",
         "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
-    }
+        "on-click": "playerctl --player=spotify play-pause",
+        "on-scroll-up": "playerctl --player=spotify next",
+        "on-scroll-down": "playerctl --player=spotify previous"
+    },
+    "group/apps": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/discord", "custom/spotify", "custom/steam", "custom/zen-browser"
+        ]
+    },
+    "custom/discord": {
+        "on-click": "vesktop",
+        "format": "{} ",
+    },
+    "custom/spotify": {
+        "on-click": "spotify",
+        "format": "{} 󰓇",
+    },
+    "custom/steam": {
+        "on-click": "steam",
+        "format": "{} 󰓓",
+    },
+    "custom/zen-browser": {
+        "on-click": "zen-browser",
+        "format": "{} 󰈹",
+    },
 }

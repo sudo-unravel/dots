@@ -9,59 +9,62 @@
     text-shadow: none;
     min-height: 0;
     margin: 0;
+    padding: 0;
 }
 
 #waybar {
-    background: transparent;
+    border-radius: 1rem;
+    background: @base;
     color: @text;
 }
 
-#workspaces,
 #tray,
 #clock,
 #pulseaudio,
 #cpu,
 #memory,
-#custom-spotify,
+#bluetooth,
+#workspaces,
+#custom-spotify-playing-now,
 #custom-notification,
 #custom-updates,
 #custom-power {
-    background-color: @base;
-    padding: 0.25rem 1rem;
-    margin: 5px 0;
+    background-color: @surface0;
+    padding: 0.2rem 0.6rem;
+    margin: 0.4rem 0;
 }
 
 #workspaces {
-    border-radius: 1rem;
-    background-color: @base;
-    margin-left: 1rem;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
     margin-right: 1rem;
+    border-radius: 0.8rem;
+    background-color: @surface0;
 }
 
 #workspaces button {
+    padding: 0 0.6rem;
     color: @lavender;
-    border-radius: 1rem;
-    padding: 0.4rem;
+    border-radius: 0.8rem;
 }
 
 #workspaces button.active {
     color: @sky;
-    border-radius: 1rem;
 }
 
 #workspaces button:hover {
     background: @surface1;
     color: @sapphire;
-    border-radius: 1rem;
 }
 
 #clock {
-    color: @mauve;
+    border-radius: 0.8rem;
+    color: @yellow;
 }
 
 #pulseaudio {
     color: @maroon;
-    border-radius: 1rem 0px 0px 1rem;
+    border-radius: 0.8rem 0px 0px 0.8rem;
 }
 
 #cpu {
@@ -72,15 +75,22 @@
     color: @green;
 }
 
-#custom-spotify {
+#custom-notification {
+    color: @mauve;
+    font-size: 1.2rem;
+    border-radius: 0px 0.8rem 0.8rem 0px;
+    margin-right: 1rem;
+}
+
+#custom-spotify-playing-now {
     color: @green;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
 }
 
 #custom-power {
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     color: @red;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 #custom-updates {
@@ -89,21 +99,20 @@
     padding-right: 0;
 }
 
-#custom-notification {
+#bluetooth {
     color: @blue;
     font-size: 1.2rem;
-    border-radius: 0px 1rem 1rem 0px;
-    margin-right: 1rem;
+    padding-right: 0;
 }
 
 #tray {
     margin-right: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
 }
 
 #tray menu,
 tooltip {
     background-color: @surface0;
     color: @text;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
