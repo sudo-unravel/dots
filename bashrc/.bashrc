@@ -63,6 +63,3 @@ alias lst="eza --color=always --icons=always --tree --level=3"
 
 # ---- staship ----
 eval "$(starship init bash)"
-
-# ---- mise-en-place ----
-eval "$(mise activate bash)"
