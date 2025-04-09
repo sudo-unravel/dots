@@ -1,0 +1,181 @@
+@define-color rosewater #f4dbd6;
+@define-color flamingo #f0c6c6;
+@define-color pink #f5bde6;
+@define-color mauve #c6a0f6;
+@define-color red #ed8796;
+@define-color maroon #ee99a0;
+@define-color peach #f5a97f;
+@define-color yellow #eed49f;
+@define-color green #a6da95;
+@define-color teal #8bd5ca;
+@define-color sky #91d7e3;
+@define-color sapphire #7dc4e4;
+@define-color blue #8aadf4;
+@define-color lavender #b7bdf8;
+@define-color text #cad3f5;
+@define-color subtext1 #b8c0e0;
+@define-color subtext0 #a5adcb;
+@define-color overlay2 #939ab7;
+@define-color overlay1 #8087a2;
+@define-color overlay0 #6e738d;
+@define-color surface2 #5b6078;
+@define-color surface1 #494d64;
+@define-color surface0 #363a4f;
+@define-color base #24273a;
+@define-color mantle #1e2030;
+@define-color crust #181926;
+
+#window,
+#box,
+#aiScroll,
+#aiList,
+#search,
+#password,
+#input,
+#prompt,
+#clear,
+#typeahead,
+#list,
+child,
+scrollbar,
+slider,
+#item,
+#text,
+#label,
+#bar,
+#sub,
+#activationlabel {
+    all: unset;
+}
+
+#cfgerr {
+    background: rgba(255, 0, 0, 0.4);
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+#window {
+    color: @lavender;
+}
+
+#box {
+    border-radius: 2px;
+    background: @base;
+    padding: 32px;
+    border: 3px solid @blue;
+    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 12px;
+}
+
+#search {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.22);
+    background: lighter(@base);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#prompt {
+    margin-left: 4px;
+    margin-right: 12px;
+    color: @text;
+    opacity: 0.2;
+}
+
+#clear {
+    color: @maroon;
+    opacity: 0.8;
+}
+
+#password,
+#input,
+#typeahead {
+    border-radius: 4px;
+}
+
+#input {
+    background: none;
+}
+
+#password {
+}
+
+#spinner {
+    padding: 8px;
+}
+
+#typeahead {
+    color: @maroon;
+    opacity: 0.8;
+}
+
+#input placeholder {
+    opacity: 0.8;
+}
+
+#list {
+}
+
+child {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+child:selected,
+child:hover {
+    background: alpha(@surface2, 0.4);
+}
+
+#item {
+}
+
+#icon {
+    margin-right: 8px;
+}
+
+#text {
+}
+
+#label {
+    font-weight: 600;
+}
+
+#sub {
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+#activationlabel {
+    color: @lavender;
+}
+
+#bar {
+}
+
+.barentry {
+}
+
+.activation #activationlabel {
+}
+
+.activation #text,
+.activation #icon,
+.activation #search {
+    opacity: 0.5;
+}
+
+.aiItem {
+    padding: 10px;
+    border-radius: 2px;
+    color: @maroon;
+    background: @base;
+}
+
+.aiItem.user {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.aiItem.assistant {
+    background: lighter(@base);
+}
