@@ -59,7 +59,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol"
     },
     "bluetooth": {
         "format": "{icon} {num_connections}",
@@ -103,34 +103,15 @@
         "on-click-right": "swaync-client -d -sw",
         "escape": true
     },
-    "custom/cava": {
-        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-        "framerate": 30,
-        "autosens": 1,
-        "bars": 14,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "method": "pipewire",
-        "source": "auto",
-        "stereo": true,
-        "bar_delimiter": 0,
-        "noise_reduction": 0.77,
-        "input_delay": 2,
-        "hide_on_silence": true,
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "actions": {
-            "on-click-right": "mode"
-        }
-    },
     "custom/updates": {
-        "format": "{} {icon}",
+        "format": "{icon} {0}",
         "return-type": "json",
         "format-icons": {
-            "has-updates": "󱍷",
+            "pending-updates": "󱍷",
             "updated": "󰗠"
         },
-        "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --network-interval-seconds 3600"
+        "exec-if": "which waybar-updates --interval 6 --cycles 600",
+        "exec": "waybar-updates"
     },
     "custom/spotify-playing-now": {
         "exec": "/usr/bin/python3 /home/whisprs/.config/waybar/scripts/mediaplayer.py --player spotify",
@@ -139,27 +120,5 @@
         "on-click": "playerctl --player=spotify play-pause",
         "on-scroll-up": "playerctl --player=spotify next",
         "on-scroll-down": "playerctl --player=spotify previous"
-    },
-    "group/apps": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/discord", "custom/spotify", "custom/steam", "custom/zen-browser"
-        ]
-    },
-    "custom/discord": {
-        "on-click": "vesktop",
-        "format": "{} ",
-    },
-    "custom/spotify": {
-        "on-click": "spotify",
-        "format": "{} 󰓇",
-    },
-    "custom/steam": {
-        "on-click": "steam",
-        "format": "{} 󰓓",
-    },
-    "custom/zen-browser": {
-        "on-click": "zen-browser",
-        "format": "{} 󰈹",
     },
 }
