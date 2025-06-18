@@ -1,5 +1,5 @@
 format = '$os$all'
-palette = "catppuccin_mocha"
+palette = "gruvbox_dark"
 
 [username]
 show_always = false
@@ -7,11 +7,11 @@ format = "[$user]($style)"
 
 [os]
 disabled = false
-format = '[$symbol](blue)'
+format = '[$symbol](gruv_blue)'
 
 [character]
-success_symbol = "[>](green)"
-error_symbol = "[>](red)"
+success_symbol = "[>](gruv_green)"
+error_symbol = "[>](gruv_red)"
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -293,29 +293,41 @@ Void = " "
 Windows = "󰍲 "
 
 [palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+cat_rosewater = "#f5e0dc"
+cat_flamingo = "#f2cdcd"
+cat_pink = "#f5c2e7"
+cat_mauve = "#cba6f7"
+cat_red = "#f38ba8"
+cat_maroon = "#eba0ac"
+cat_peach = "#fab387"
+cat_yellow = "#f9e2af"
+cat_green = "#a6e3a1"
+cat_teal = "#94e2d5"
+cat_sky = "#89dceb"
+cat_sapphire = "#74c7ec"
+cat_blue = "#89b4fa"
+cat_lavender = "#b4befe"
+cat_text = "#cdd6f4"
+cat_subtext1 = "#bac2de"
+cat_subtext0 = "#a6adc8"
+cat_overlay2 = "#9399b2"
+cat_overlay1 = "#7f849c"
+cat_overlay0 = "#6c7086"
+cat_surface2 = "#585b70"
+cat_surface1 = "#45475a"
+cat_surface0 = "#313244"
+cat_base = "#1e1e2e"
+cat_mantle = "#181825"
+cat_crust = "#11111b"
+
+[palettes.gruvbox_dark]
+gruv_fg0 = '#fbf1c7'
+gruv_bg1 = '#3c3836'
+gruv_bg3 = '#665c54'
+gruv_blue = '#458588'
+gruv_aqua = '#689d6a'
+gruv_green = '#98971a'
+gruv_orange = '#d65d0e'
+gruv_purple = '#b16286'
+gruv_red = '#cc241d'
+gruv_yellow = '#d79921'

@@ -35,8 +35,6 @@ require('lazy').setup {
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/catppuccin',
-
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
@@ -68,6 +66,9 @@ require('lazy').setup {
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
+
+  -- set theme
+  require 'theme.gruvbox',
 }
 
 -- vim: ts=2 sts=2 sw=2 et
