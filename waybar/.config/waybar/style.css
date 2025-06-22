@@ -1,4 +1,4 @@
-@import "./themes/macchiato.css";
+@import "./themes/gruvbox.css";
 
 * {
     font-weight: 700;
@@ -13,9 +13,8 @@
 }
 
 #waybar {
-    border-radius: 1rem;
-    background: @base;
-    color: @text;
+    background: transparent;
+    color: @fg-color;
 }
 
 #tray,
@@ -28,91 +27,83 @@
 #custom-spotify-playing-now,
 #custom-notification,
 #custom-updates,
+#workspaces,
 #custom-power {
-    background-color: @surface0;
-    padding: 0.2rem 0.6rem;
-    margin: 0.4rem 0;
+    background-color: @bg1-color;
+    padding: 0.4rem 0.8rem;
 }
 
 #workspaces {
-    padding: 0.2rem;
-    margin-left: 0.5rem;
-    margin-right: 1rem;
+    padding: 0;
     border-radius: 0.8rem;
-    background-color: @surface0;
 }
 
 #workspaces button {
     padding: 0 0.6rem;
-    color: @lavender;
-    border-radius: 0.8rem;
+    color: @purple-color;
+    border-radius: 1rem;
 }
 
 #workspaces button.active {
-    color: @sky;
+    color: @blue-color;
+    background: @bg2-color;
 }
 
 #workspaces button:hover {
-    background: @surface1;
-    color: @sapphire;
+    color: @purple-sat-color;
 }
 
 #clock {
     border-radius: 0.8rem;
-    color: @yellow;
+    color: @yellow-color;
 }
 
 #pulseaudio {
-    color: @maroon;
+    color: @purple-color;
     border-radius: 0.8rem 0px 0px 0.8rem;
 }
 
 #cpu {
-    color: @yellow;
+    color: @yellow-color;
 }
 
 #memory {
-    color: @green;
+    color: @orange-color;
 }
 
 #custom-notification {
-    color: @mauve;
+    color: @purple-sat-color;
     font-size: 1.2rem;
     border-radius: 0px 0.8rem 0.8rem 0px;
-    margin-right: 1rem;
 }
 
 #custom-spotify-playing-now {
-    color: @green;
+    color: @green-color;
     border-radius: 0.8rem;
 }
 
 #custom-power {
     border-radius: 0.8rem;
-    color: @red;
-    margin-right: 0.5rem;
+    color: @red-color;
 }
 
 #custom-updates {
     font-size: 1.2rem;
-    color: @teal;
-    padding-right: 0;
+    color: @aqua-color;
 }
 
 #bluetooth {
-    color: @blue;
+    color: @blue-color;
     font-size: 1.2rem;
-    padding-right: 0;
 }
 
 #tray {
-    margin-right: 1rem;
     border-radius: 0.8rem;
 }
 
 #tray menu,
 tooltip {
-    background-color: @surface0;
-    color: @text;
+    background-color: @bg1-color;
+    color: @fg-color;
     border-radius: 0.5rem;
 }

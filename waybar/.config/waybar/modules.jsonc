@@ -22,13 +22,8 @@
         "spacing": 10
     },
     "clock": {
+        "interval": 5,
         "format": "{:%B %d %Y 󰸗 // %R }",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "format": {
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -38,15 +33,6 @@
     "memory": {
         "format": "{used}GB ",
         "interval": 5
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -113,12 +99,15 @@
         "exec-if": "which waybar-updates --interval 6 --cycles 600",
         "exec": "waybar-updates"
     },
-    "custom/spotify-playing-now": {
-        "exec": "/usr/bin/python3 /home/whisprs/.config/waybar/scripts/mediaplayer.py --player spotify",
-        "format": "{} ",
-        "return-type": "json",
-        "on-click": "playerctl --player=spotify play-pause",
-        "on-scroll-up": "playerctl --player=spotify next",
-        "on-scroll-down": "playerctl --player=spotify previous"
-    },
+    "group/general": {
+		"orientation": "horizontal",
+		"modules": [
+            "pulseaudio",
+			"cpu",
+			"memory",
+            "custom/updates",
+            "bluetooth",
+            "custom/notification"
+		]
+	},
 }
