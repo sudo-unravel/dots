@@ -27,6 +27,7 @@
 #custom-spotify-playing-now,
 #custom-notification,
 #custom-updates,
+#cava,
 #workspaces,
 #custom-power {
     background-color: @bg1-color;
@@ -41,7 +42,7 @@
 #workspaces button {
     padding: 0 0.6rem;
     color: @purple-color;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
 }
 
 #workspaces button.active {
@@ -56,6 +57,11 @@
 #clock {
     border-radius: 0.8rem;
     color: @yellow-color;
+}
+
+#cava {
+    border-radius: 0.8rem;
+    color: @fg-color;
 }
 
 #pulseaudio {

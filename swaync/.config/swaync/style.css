@@ -1,270 +1,274 @@
-* {
-  all: unset;
-  font-size: 14px;
-  font-family: "Ubuntu Nerd Font";
-  transition: 200ms;
+/* -----------------------------
+   Global Notification Elements
+   ----------------------------- */
+
+/* The container row for all notification elements. */
+.notification-row {
+  outline: none;
 }
 
-.floating-notifications.background .notification-row .notification-background {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #1d2021;
-  border-radius: 12.6px;
-  margin: 18px;
-  background-color: #282828;
-  color: #ebdbb2;
+/* The background element: acts as a box behind the notification. */
+.notification-background {
+  padding: 10px 6px;
+}
+
+/* The main notification box that contains actions and content. */
+.notification {
+  border-radius: 12px;
+  border: 1px solid rgba(37, 36, 35, 0.9);
   padding: 0;
+  background: rgba(50, 48, 47, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(37, 36, 35, 0.3),
+    0 1px 3px 1px rgba(37, 36, 35, 0.7),
+    0 2px 6px 2px rgba(37, 36, 35, 0.3);
 }
 
-.floating-notifications.background .notification-row .notification-background .notification {
-  padding: 7px;
-  border-radius: 12.6px;
+/* For desktop notifications that are not part of a panel. */
+.floating-notifications {
+  background: transparent;
 }
 
-.floating-notifications.background .notification-row .notification-background .notification.critical {
-  box-shadow: inset 0 0 7px 0 #cc241d;
+/* The main content area for notification text (like messages). */
+.notification-content {
+  background: transparent;
+  border-radius: 12px;
+  padding: 4px;
 }
 
-.floating-notifications.background .notification-row .notification-background .notification .notification-content {
-  margin: 7px;
+/* Default action elements, such as a Telegram message. */
+.notification-default-action {
+  padding: 4px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  color: rgb(212, 190, 152);
 }
 
-.floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
-  color: #ebdbb2;
+.notification-default-action:hover {
+  -gtk-icon-effect: none;
+  background: rgba(60, 56, 54, 0.95);
 }
 
-.floating-notifications.background .notification-row .notification-background .notification .notification-content .time {
-  color: #83a589;
+/* Actions such as "Mark as read". */
+.notification-action {
+  padding: 4px;
+  margin: 0;
+  background: transparent;
+  color: rgb(212, 190, 152);
+  border: none;
+  border-top: 1px solid rgb(80, 73, 69);
+  border-radius: 0;
+  border-right: 1px solid rgb(80, 73, 69);
 }
 
-.floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
-  color: #ebdbb2;
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: rgba(60, 56, 54, 0.95);
 }
 
-.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
-  min-height: 3.4em;
+/* Adjust border radii on the first and last action buttons. */
+.notification-action:first-child {
+  border-bottom-left-radius: 12px;
 }
 
-.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  border-radius: 7px;
-  color: #ebdbb2;
-  background-color: #1d2021;
-  box-shadow: inset 0 0 0 1px #32302f;
-  margin: 7px;
+.notification-action:last-child {
+  border-bottom-right-radius: 12px;
+  border-right: none;
 }
 
-.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #1d2021;
-  color: #ebdbb2;
+/* ----------------------
+   Inline Reply Elements
+   ---------------------- */
+
+/* The input line for inline replies. */
+.inline-reply {
+  margin-top: 4px;
 }
 
-.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #83a598;
-  color: #ebdbb2;
+/* The text entry for inline replies. */
+.inline-reply-entry {
+  background: rgba(37, 36, 35, 0.95);
+  color: rgb(212, 190, 152);
+  caret-color: rgb(212, 190, 152);
+  border: transparent;
+  border-radius: 12px;
 }
 
-.floating-notifications.background .notification-row .notification-background .close-button {
-  margin: 7px;
-  padding: 2px;
-  border-radius: 6.3px;
-  color: #282828;
-  background-color: #cc241d;
+/* Button for sending inline replies. */
+.inline-reply-button {
+  margin-left: 4px;
+  background: transparent;
+  border: 1px solid rgba(124, 111, 100, 0.95);
+  border-radius: 12px;
+  color: rgb(212, 190, 152);
 }
 
-.floating-notifications.background .notification-row .notification-background .close-button:hover {
-  background-color: #ebdbb2;
-  color: #282828;
+.inline-reply-button:disabled {
+  background: transparent;
+  color: rgba(124, 111, 100, 1);
+  border-color: transparent;
 }
 
-.floating-notifications.background .notification-row .notification-background .close-button:active {
-  background-color: #cc241d;
-  color: #282828;
+.inline-reply-button:hover {
+  background: rgba(80, 73, 69, 0.95);
 }
 
-.control-center {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #1d2021;
-  border-radius: 12.6px;
-  margin: 18px;
-  background-color: #282828;
-  color: #ebdbb2;
-  padding: 14px;
-}
+/* ------------------------------
+   Notification Control Elements
+   ------------------------------ */
 
-.control-center .widget-title {
-  color: #ebdbb2;
-  font-size: 1.3em;
-}
-
-.control-center .widget-title button {
-  border-radius: 7px;
-  color: #ebdbb2;
-  background-color: #1d2021;
-  box-shadow: inset 0 0 0 1px #32302f;
-  padding: 8px;
-}
-
-.control-center .widget-title button:hover {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #98971a;
-  color: #ebdbb2;
-}
-
-.control-center .widget-title button:active {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #83a598;
-  color: #282828;
-}
-
-.control-center .notification-row .notification-background {
-  border-radius: 7px;
-  color: #ebdbb2;
-  background-color: #1d2021;
-  box-shadow: inset 0 0 0 1px #32302f;
-  margin-top: 14px;
-}
-
-.control-center .notification-row .notification-background .notification {
-  padding: 7px;
-  border-radius: 7px;
-}
-
-.control-center .notification-row .notification-background .notification.critical {
-  box-shadow: inset 0 0 7px 0 #cc241d;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content {
-  margin: 7px;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .summary {
-  color: #ebdbb2;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .time {
-  color: #83a589;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .body {
-  color: #ebdbb2;
-}
-
-.control-center .notification-row .notification-background .notification > *:last-child > * {
-  min-height: 3.4em;
-}
-
-.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  border-radius: 7px;
-  color: #ebdbb2;
-  background-color: #11111b;
-  box-shadow: inset 0 0 0 1px #32302f;
-  margin: 7px;
-}
-
-.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #1d2021;
-  color: #ebdbb2;
-}
-
-.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #83a598;
-  color: #ebdbb2;
-}
-
-.control-center .notification-row .notification-background .close-button {
-  margin: 7px;
-  padding: 2px;
-  border-radius: 6.3px;
-  color: #282828;
-  background-color: #ebdbb2;
-}
-
-.control-center .notification-row .notification-background .close-button:hover {
-  background-color: #cc241d;
-  color: #282828;
-}
-
-.control-center .notification-row .notification-background .close-button:active {
-  background-color: #cc241d;
-  color: #282828;
-}
-
-.control-center .notification-row .notification-background:hover {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #458588;
-  color: #ebdbb2;
-}
-
-.control-center .notification-row .notification-background:active {
-  box-shadow: inset 0 0 0 1px #32302f;
-  background-color: #83a598;
-  color: #ebdbb2;
-}
-
-progressbar,
-progress,
-trough {
-  border-radius: 12.6px;
-}
-
-progressbar {
-  box-shadow: inset 0 0 0 1px #32302f;
-}
-
-.notification.critical progress {
-  background-color: #cc241d;
-}
-
-.notification.low progress,
-.notification.normal progress {
-  background-color: #458588;
-}
-
-trough {
-  background-color: #1d2021;
-}
-
-.control-center trough {
-  background-color: #32302f;
-}
-
-.control-center-dnd {
+/* The close button for notifications. */
+.close-button {
+  background: transparent;
+  color: rgb(212, 190, 152);
+  border-radius: 100%;
   margin-top: 5px;
-  border-radius: 8px;
-  background: #1d2021;
-  border: 1px solid #32302f;
-  box-shadow: none;
+  margin-right: 5px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
-.control-center-dnd:checked {
-  background: #1d2021;
+.close-button:hover {
+  background: rgba(80, 73, 69, 0.95);
 }
 
-.control-center-dnd slider {
-  background: #32302f;
-  border-radius: 8px;
+/* ---------------------------
+   Icons and Summary Elements
+   --------------------------- */
+
+/* Styling for images within notifications. */
+.image {
+  -gtk-icon-effect: none;
+  border-radius: 100px;
+  margin: 4px;
 }
 
+/* The app icon in a notification. */
+.app-icon {
+  -gtk-icon-effect: none;
+  -gtk-icon-shadow: 0 1px 4px black;
+  margin: 6px;
+}
+
+/* Notification summary text. */
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: rgb(212, 190, 152);
+}
+
+/* Time indicators. */
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: rgb(212, 190, 152);
+}
+
+/* Main body text of a notification. */
+.body {
+  font-size: 14px;
+  font-weight: normal;
+  background: transparent;
+  color: rgb(212, 190, 152);
+  margin-top: 5px;
+}
+
+/* Body images within notifications. */
+.body-image {
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 12px;
+  -gtk-icon-effect: none;
+}
+
+/* ----------------------------
+   Control Center and Grouping
+   ---------------------------- */
+
+/* The control-center panel containing notifications and widgets. */
+.control-center {
+  background: rgba(37, 36, 35, 0.85);
+  color: rgb(212, 190, 152);
+  border-radius: 12px;
+}
+
+/* Placeholder for the control center list. */
+.control-center-list-placeholder {
+  opacity: 1;
+}
+
+/* The control center list itself. */
+.control-center-list {
+  background: transparent;
+}
+
+/* Blank window styling (transparent background). */
+.blank-window {
+  background: transparent;
+}
+
+/* Notification groups within the control center. */
+.notification-group-buttons,
+.notification-group-headers {
+  margin: 0 16px;
+  color: rgb(212, 190, 152);
+}
+
+.notification-group-icon {
+  color: rgb(212, 190, 152);
+}
+
+.notification-group-header {
+  color: rgb(212, 190, 152);
+}
+
+/* ---------------
+   Widget Styling
+   --------------- */
+
+/* Title widget styling. */
+.widget-title {
+  color: rgb(212, 190, 152);
+  margin: 8px;
+  font-size: 20px;
+}
+
+.widget-title > button {
+  font-size: 16px;
+  color: rgb(212, 190, 152);
+  text-shadow: none;
+  background: rgba(37, 36, 35, 0.9);
+  border: 1px solid rgba(124, 111, 100, 0.95);
+  border-radius: 12px;
+}
+
+.widget-title > button:hover {
+  background: rgba(80, 73, 69, 0.9);
+}
+
+/* DND (Do Not Disturb) widget styling. */
 .widget-dnd {
-  margin: 0px;
+  color: rgb(212, 190, 152);
+  margin: 8px;
   font-size: 1.1rem;
 }
 
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 8px;
-  background: #1d2021;
-  border: 1px solid #32302f;
+  border-radius: 12px;
+  background: rgba(37, 36, 35, 0.9);
+  border: 1px solid rgba(124, 111, 100, 0.95);
   box-shadow: none;
 }
 
 .widget-dnd > switch:checked {
-  background: #1d2021;
+  background: rgba(231, 138, 78, 0.9);
 }
 
 .widget-dnd > switch slider {
-  background: #32302f;
-  border-radius: 8px;
-  border: 1px solid #d65d0e;
+  background: rgba(50, 48, 47, 0.95);
+  border-radius: 12px;
 }
