@@ -24,7 +24,16 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
-			{ "j-hui/fidget.nvim", opts = {} },
+			{
+				"j-hui/fidget.nvim",
+				opts = {
+					notification = {
+						window = {
+							winblend = 0,
+						},
+					},
+				},
+			},
 
 			-- Allows extra capabilities provided by blink.cmp
 			"saghen/blink.cmp",
@@ -220,7 +229,20 @@ return {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- clangd = {},
-				-- gopls = {},
+				gopls = {
+					settings = {
+						gopls = {
+							completeUnimported = true,
+							usePlaceholders = true,
+							analyses = {
+								unusedparams = true,
+							},
+						},
+					},
+				},
+				somesass_ls = {
+					filetypes = { "scss", "sass", "css", "less" },
+				},
 				-- pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -269,6 +291,7 @@ return {
 
 			require("mason-lspconfig").setup({
 				ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+				automatic_enable = true,
 				automatic_installation = false,
 				handlers = {
 					function(server_name)

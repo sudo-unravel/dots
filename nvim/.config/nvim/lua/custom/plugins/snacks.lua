@@ -3,6 +3,13 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
+		bigfile = {},
+		lazygit = {},
+		indent = {
+			animate = {
+				enabled = false,
+			},
+		},
 		dashboard = {
 			preset = {
 				keys = {
