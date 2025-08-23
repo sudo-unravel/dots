@@ -24,6 +24,7 @@
   "clock": {
     "interval": 5,
     "format": "{:%B %d %Y 󰸗 // %R }",
+    "on-click": "gnome-calendar",
     "tooltip": false,
   },
   "cpu": {
