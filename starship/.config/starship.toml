@@ -1,5 +1,5 @@
 format = '$os$all'
-palette = "gruvbox_dark"
+palette = "gruvbox_material_dark"
 
 [username]
 show_always = false
@@ -10,8 +10,8 @@ disabled = false
 format = '[$symbol](gruv_blue)'
 
 [character]
-success_symbol = "[>](gruv_green)"
-error_symbol = "[>](gruv_red)"
+success_symbol = "[](gruv_green)"
+error_symbol = "[](gruv_red)"
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -320,14 +320,14 @@ cat_base = "#1e1e2e"
 cat_mantle = "#181825"
 cat_crust = "#11111b"
 
-[palettes.gruvbox_dark]
-gruv_fg0 = '#fbf1c7'
-gruv_bg1 = '#3c3836'
-gruv_bg3 = '#665c54'
-gruv_blue = '#458588'
-gruv_aqua = '#689d6a'
-gruv_green = '#98971a'
-gruv_orange = '#d65d0e'
-gruv_purple = '#b16286'
-gruv_red = '#cc241d'
-gruv_yellow = '#d79921'
+[palettes.gruvbox_material_dark]
+gruv_fg0 = '#d4be98'
+gruv_bg1 = '#32302f'
+gruv_bg3 = '#45403d'
+gruv_blue = '#7daea3'
+gruv_aqua = '#89b482'
+gruv_green = '#a9b665'
+gruv_orange = '#e78a4e'
+gruv_purple = '#d3869b'
+gruv_red = '#ea6962'
+gruv_yellow = '#d8a657'

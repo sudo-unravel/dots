@@ -26,6 +26,7 @@ return {
 				search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex", conceal = false },
 				search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex", conceal = false },
 				filter = { pattern = "^:%s*!", icon = "$", lang = "bash", conceal = false },
+				help = { pattern = "^:%s*he?l?p?%s+", icon = "󰋖", conceal = false },
 			},
 		},
 		presets = {

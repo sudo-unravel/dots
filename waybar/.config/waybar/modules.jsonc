@@ -13,8 +13,8 @@
       "on-scroll-down": "hyprctl dispatch workspace e-1",
     },
     "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4, 5, 6],
-      "DP-2": [7, 8, 9, 10],
+      "DP-1": [1, 2, 3, 4, 5, 6, 7, 8],
+      "DP-2": [9, 10, 11, 12],
     },
   },
   "tray": {
@@ -99,7 +99,7 @@
       "updated": "󰗠",
     },
     "exec-if": "which waybar-updates",
-    "exec": "waybar-updates --interval 6 --cycles 600",
+    "exec": "waybar-updates --interval 6 --cycles 100",
   },
   "cava": {
     //"cava_config": "~/.config/cava/cava.conf",

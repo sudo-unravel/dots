@@ -4,12 +4,7 @@ return {
 	lazy = false,
 	opts = {
 		bigfile = {},
-		lazygit = {},
-		indent = {
-			animate = {
-				enabled = false,
-			},
-		},
+		lazygit = {}, --TODO: setup
 		dashboard = {
 			preset = {
 				keys = {

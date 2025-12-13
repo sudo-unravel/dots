@@ -65,3 +65,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# ---- GOPATH ----
+export PATH="$(go env GOPATH)/bin:$PATH"

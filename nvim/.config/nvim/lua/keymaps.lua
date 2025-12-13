@@ -25,8 +25,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- swap between current and previous file with <leader>-tab
-vim.keymap.set('n', '<leader><Tab>', '<C-^>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader><Tab>', '<C-^>', { noremap = true, silent = true, desc = "Swap between current and previous file with <leader>-tab" })
+
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show diagnostics in float" })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
