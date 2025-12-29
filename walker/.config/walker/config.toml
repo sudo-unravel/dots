@@ -38,7 +38,7 @@ down = ["Down"]
 up = ["Up"]
 toggle_exact = ["ctrl e"]
 resume_last_query = ["ctrl r"]
-quick_activate = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8"]
+quick_activate = ["F1", "F2", "F3", "F4"]
 page_down = ["Page_Down"]
 page_up = ["Page_Up"]
 show_actions = ["alt j"]
@@ -149,13 +149,12 @@ websearch = [
 
 desktopapplications = [
   { action = "start", default = true, bind = "Return" },
-  { action = "start:keep", label = "open+next", bind = "shift Return", after = "KeepOpen" },
-  { action = "new_instance", label = "new instance", bind = "ctrl Return" },
-  { action = "new_instance:keep", label = "new+next", bind = "ctrl alt Return", after = "KeepOpen" },
-  { action = "pin", bind = "ctrl p", after = "AsyncReload" },
-  { action = "unpin", bind = "ctrl p", after = "AsyncReload" },
-  { action = "pinup", bind = "ctrl n", after = "AsyncReload" },
-  { action = "pindown", bind = "ctrl m", after = "AsyncReload" },
+  { action = "start:keep", bind = "ctrl Return", after = "KeepOpen" },
+  { action = "start:keep", bind = "shift Return", after = "KeepOpen" },
+  { action = "pin", bind = "ctrl shift p", after = "AsyncReload" },
+  { action = "unpin", bind = "ctrl shift p", after = "AsyncReload" },
+  { action = "pinup", bind = "alt Up", after = "AsyncReload" },
+  { action = "pindown", bind = "alt Down", after = "AsyncReload" },
 ]
 
 files = [
