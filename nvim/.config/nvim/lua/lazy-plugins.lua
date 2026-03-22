@@ -56,7 +56,7 @@ require("lazy").setup({
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.
-  --
+	--
 	require("custom.plugins.go"),
 	require("custom.plugins.vim-coach"),
 	require("custom.plugins.typr"),
@@ -64,7 +64,6 @@ require("lazy").setup({
 	require("custom.plugins.snacks"),
 	require("custom.plugins.highlight-colors"),
 	require("custom.plugins.illuminate"),
-	require("custom.plugins.noice"),
 	require("custom.plugins.lualine"),
 	require("custom.plugins.surround"),
 	--
