@@ -1,0 +1,3 @@
+[submodule "nvim/.config/nvim-config"]
+	path = nvim/.config/nvim-config
+	url = git@github.com:sudo-unravel/nvim-config.git
