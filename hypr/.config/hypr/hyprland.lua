@@ -361,7 +361,10 @@ hl.bind(
 )
 
 -- Noctalia
-hl.bind(mainMod .. " + F5", hl.dsp.exec_cmd("pkill qs; nohup noctalia >/dev/null 2>&1 &"))
+hl.bind(
+	mainMod .. " + F5",
+	hl.dsp.exec_cmd("pkill -x noctalia 2>/dev/null; nohup noctalia > ~/.cache/noctalia-restart.log 2>&1 &")
+)
 
 -- Awakened POE Trade: pass shortcuts through to the app.
 -- hl.bind("SHIFT + Space", hl.dsp.pass({ window = "class:awakened-poe-trade" })) -- Blocks whitespaces while typing and holding shift
