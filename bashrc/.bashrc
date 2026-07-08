@@ -68,3 +68,6 @@ function y() {
 
 # ---- GOPATH ----
 export PATH="$(go env GOPATH)/bin:$PATH"
+
+# ---- NVM ----
+# source /usr/share/nvm/init-nvm.sh
